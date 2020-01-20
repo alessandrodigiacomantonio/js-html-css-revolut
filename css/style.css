@@ -2,4 +2,41 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
+  cursor: default;
+}
+
+html {
+  font-size: 10px;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  color: #8b959e;
+}
+[class^="header__nav__"] {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.header__nav__left {
+  margin-right: 40px;
+}
+.header__nav .items:hover,
+.header__nav .active {
+  color: #191c1f;
+  cursor: pointer;
+}
+
+.header__nav .items:not(:last-child){
+  margin-right: 40px;
+}
+.header__nav #logo {
+  margin-bottom: 10px;
+  cursor: pointer;
 }
