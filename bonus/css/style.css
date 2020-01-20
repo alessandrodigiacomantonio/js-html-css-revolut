@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   user-select: none;
-  /* cursor: default; */
 }
 
 html {
@@ -36,10 +35,9 @@ html {
   text-decoration: none;
   color: #8b959e;
 }
-.header__nav .link:hover,
-.header__nav .active .link {
+/* .header__nav .link:hover {
   color: #191c1f;
-}
+} */
 .header__nav .items:not(:last-child){
   margin-right: 40px;
 }
@@ -110,4 +108,8 @@ html {
   color: rgb(235, 0, 141);
   font-size: 1rem;
   font-weight: 700;
+}
+
+.active > .link {
+  color: #191c1f;
 }
