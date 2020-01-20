@@ -49,6 +49,11 @@ html {
 .header__nav .items {
   position: relative;
 }
+.header__nav .items#personale .link:hover,
+.header__nav .items#business .link:hover,
+.header__nav .items#tariffazione .link:hover {
+  color: #191c1f;
+}
 .header__nav .items#scarica-app {
   background-color: rgb(235, 0, 141);
   border-radius: 50px;
@@ -80,6 +85,9 @@ html {
   height: 70px;
   padding-left: 40px;
   padding-right: 40px;
+}
+.header__nav .items__dropdown__element .link:hover {
+  color: #191c1f;
 }
 .items__dropdown__element .beta {
   position: relative;
