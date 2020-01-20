@@ -1,14 +1,15 @@
 $(document).ready(function() {
   $('.header__nav__right .items').hover(
     function () {
-      if ( !$(this).hasClass('active') || !$('#tariffazione') ) {
+      console.log( !$('#tariffazione') );
+      if ( $(this).siblings('#tariffazione').length == 1 && !$(this).hasClass('active') ) {
         $(this).siblings().removeClass('active');
         $(this).siblings().find('.items__dropdown').hide();
         $(this).addClass('active');
         $(this).find('.items__dropdown').show();
       }
     }, function () {
-      if ( !$(this).hasClass('active') || !$('#tariffazione') ) {
+      if ( !$('#tariffazione') ) {
         $(this).find('.items__dropdown').hide();
       }
     });
@@ -22,8 +23,8 @@ $(document).ready(function() {
       $(this).find('.items__dropdown').hide();
     }
   });
-  $('html').on('click', function() {
-    $('.header__nav__right .items').removeClass('active');
-    $('.header__nav__right .items').find('.items__dropdown').hide();
-  });
+  // $('html').on('click', function() {
+  //   $('.header__nav__right .items').removeClass('active');
+  //   $('.header__nav__right .items').find('.items__dropdown').hide();
+  // });
 });
