@@ -1,6 +1,9 @@
 $(document).ready(function() {
+	var luca = $('body');
   $('.header__nav__right .items').hover(
     function () {
+    	console.log('sono entrato');
+    	
       if ($(this).siblings('#lingua').length == 0) {
         $(this).siblings().removeClass('active');
         $(this).siblings().find('.items__dropdown').hide();
@@ -18,9 +21,15 @@ $(document).ready(function() {
         $('#lingua').find('.fa-chevron-down').removeClass('fa-chevron-up');
       }
     }, function () {
-      console.log('A caval donato non si guarda in bocca');
+      console.log('sono uscito');
+      $('html').one('click', function() {
+    $('.header__nav__right .items').removeClass('active');
+    $('.header__nav__right .items').find('.items__dropdown').hide();
+  });
+      
     });
   $('.header__nav__right .items').on('click', function () {
+
     if ($(this).siblings('#lingua').length == 0) {
       if ($(this).hasClass('active') ) {
         $('#lingua').find('.fa-chevron-up').addClass('fa-chevron-down');
@@ -39,8 +48,5 @@ $(document).ready(function() {
       $(this).find('.items__dropdown').hide();
     }
   });
-  // $(':not(.items)').on('click', function() {
-  //   $('.header__nav__right .items').removeClass('active');
-  //   $('.header__nav__right .items').find('.items__dropdown').hide();
-  // });
+  
 });
